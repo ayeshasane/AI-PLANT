@@ -54,3 +54,30 @@ This project uses a Convolutional Neural Network (CNN) to detect diseases in tom
 - Image size: 224x224
 - Normalized pixel values (0-1)
 - Multi-class classification with 6 classes
+
+## Disease Detection Example
+
+Once the model is trained, predictions will return:
+
+```
+Plant: Tomato
+Disease: Early Blight
+Confidence: 92.5%
+
+Detailed predictions:
+  tomato_early_blight: 92.50%
+  tomato_late_blight: 5.20%
+  tomato_healthy: 2.10%
+  apple_healthy: 0.10%
+  apple_scab: 0.05%
+  apple_black_rot: 0.05%
+```
+
+## Testing the Model
+
+Run the demo script to see example predictions:
+```
+python demo.py
+```
+
+This will show how the disease detection system works and display example confidence scores for each class.
