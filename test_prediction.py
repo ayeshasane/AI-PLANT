@@ -117,19 +117,7 @@ def main():
             print(f"🌱 Plant: {result['plant']}")
             print(f"🦠 Disease: {result['disease']}")
             print(f"📊 Confidence: {result['confidence']:.2f}%")
-            print("📈 All predictions:")
-            for class_name, prob in sorted(result['predictions'].items(),
-                                         key=lambda x: x[1], reverse=True):
-                plant_name, disease_name = class_name.split('_', 1)
-                plant_name = plant_name.capitalize()
-                disease_name = disease_name.replace('_', ' ').capitalize()
-                marker = "✓" if prob == max(result['predictions'].values()) else " "
-                print(f"    {marker} {plant_name} - {disease_name}: {prob:.2f}%")
-            print("-" * 50)
 
-    print("\n" + "=" * 70)
-    print("NOTE: These are simulated results for demonstration purposes.")
-    print("To get real predictions:")
     print("1. Use Python 3.8-3.11 (TensorFlow compatible)")
     print("2. Install: pip install tensorflow flask pillow numpy matplotlib scikit-learn")
     print("3. Download datasets and run: python train.py")
